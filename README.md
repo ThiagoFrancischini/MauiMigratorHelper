@@ -3,7 +3,7 @@
 This is a Windows Forms application attempting to help migrate old Xamarin Projects (with the .shproj file) to .NET Maui.
 
 First, create a new .NET Maui project.
-Second, run the application and provide the name and directory of the Xamarin Solution, as well as the name and directory of the Maui solution.
+Second, run the application and provide the name and directory of the Xamarin Solution, as well as the name and directory of the Maui solution (where the .sln file is placed).
 The system will retrieve your Xamarin files and organize them within your .NET Maui project in the correct folders. It will replace the namespaces of the old solution with the new ones and change Xamarin usings to Microsoft.Maui. Afterward, it will rearrange your Android and iOS project files to the Platforms/Android or Platforms/iOS directories in .NET Maui. In these directories, the startup files will not be replaced; instead, the old ones will be moved with "backupXF" appended to the file name.
 
 Next, the system will retrieve the packages listed in packages.config, standardize them, and move them to the .csproj file of .NET Maui. Finally, it will retrieve the images from the Drawable folder in Android and move them to the shared image folder of .NET Maui.
