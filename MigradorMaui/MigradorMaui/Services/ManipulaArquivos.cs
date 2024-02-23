@@ -24,6 +24,7 @@ namespace MigradorMaui.Services
 
                 texto = texto.Replace("Xamarin.Forms", "Microsoft.Maui");
                 texto = texto.Replace("using Xamarin.Essentials;", "");
+                texto = texto.Replace("http://xamarin.com/schemas/2014/forms", "http://schemas.microsoft.com/dotnet/2021/maui");
                 texto = texto.Replace(infos.NomeSolucaoVelha, infos.NomeSolucaoNova);
 
                 File.WriteAllText(pathFinal, texto);
